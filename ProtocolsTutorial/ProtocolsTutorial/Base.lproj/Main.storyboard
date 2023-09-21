@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kZK-go-3ji">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProtocolsTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zlW-7w-9Hm">
+                                <rect key="frame" x="20" y="381" width="353" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-1v-eu0">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="41"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Open 2nd Screen"/>
+                                        <connections>
+                                            <action selector="open2ndScreenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gx7-OV-Zsj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="As2-ww-imh">
+                                        <rect key="frame" x="0.0" y="49" width="353" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mzC-1v-eu0" secondAttribute="trailing" id="8Nv-zs-Cve"/>
+                                    <constraint firstAttribute="trailing" secondItem="As2-ww-imh" secondAttribute="trailing" id="dqT-QU-wDJ"/>
+                                    <constraint firstAttribute="height" constant="90" id="iGi-mT-0KY"/>
+                                    <constraint firstItem="As2-ww-imh" firstAttribute="leading" secondItem="zlW-7w-9Hm" secondAttribute="leading" id="pjI-6U-c5Y"/>
+                                    <constraint firstItem="mzC-1v-eu0" firstAttribute="leading" secondItem="zlW-7w-9Hm" secondAttribute="leading" id="yPZ-vT-Tro"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E71-cJ-Olt">
+                                <rect key="frame" x="20" y="783" width="353" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wW9-eS-jy5"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" title="Open POST's List">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openPostsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yOW-Di-zQg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zlW-7w-9Hm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6W9-cj-K1L"/>
+                            <constraint firstItem="E71-cJ-Olt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6ve-e3-8kG"/>
+                            <constraint firstItem="zlW-7w-9Hm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hje-gt-a9e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E71-cJ-Olt" secondAttribute="trailing" constant="20" id="JYg-lY-sex"/>
+                            <constraint firstItem="zlW-7w-9Hm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h1i-NI-DdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zlW-7w-9Hm" secondAttribute="trailing" constant="20" id="o6Y-Wa-eSX"/>
+                            <constraint firstItem="E71-cJ-Olt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tHk-0W-Ufy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6qZ-lr-htY"/>
+                    <connections>
+                        <outlet property="stringSelectedLabel" destination="As2-ww-imh" id="y5e-hJ-3L0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HBa-xH-1X7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kZK-go-3ji" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N74-9H-Q5J">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M9J-0E-dU4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTs-To-rV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
